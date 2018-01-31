@@ -215,5 +215,7 @@ type NullWriter struct {
 }
 
 func (w *NullWriter) Write(b []byte) (size int, err error) {
-	return size, nil
+	size = len(b)
+	err = nil
+	return
 }
